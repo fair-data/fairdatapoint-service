@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  fdp:
+    image: "nlesc/fairdatapoint"
+    restart: unless-stopped
+    depends_on:
+      - virtuoso
+  grlc:
+    image: "nlesc/fairdatapoint-search"
+    restart: unless-stopped
+    ports:
+      - "8088:8088"
+    environment:
+      - GRLC_SPARQL_ENDPOINT=http://virtuoso:8890/sparql
+      - DEBUG=false
+    depends_on:
+      - virtuoso
+  virtuoso:
+    image: "tenforce/virtuoso"
+    restart: unless-stopped
+    # ports:
+    #   - "8890:8890"
+    #   - "1111:1111"
+    environment:
+      - SPARQL_UPDATE=true
+    volumes:
+      - ./data/virtuoso:/data
