@@ -15,4 +15,4 @@ Run the command:
 ```
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
 ```
-If you are using example values, you then can go to http://0.0.0.0/ui and http://0.0.0.0:8088/api-local to try the services.
+If you are using example values, you can then go to http://0.0.0.0/ui and http://0.0.0.0:8088/api-local to try the services.
