@@ -4,6 +4,6 @@ services:
     command: gunicorn -b YOUR_FDP_HOST:YOUR_FDP_PORT "fdp.fdp:create_app('YOUR_FDP_HOST', YOUR_FDP_PORT, 'http://virtuoso:8890/sparql')"
     ports:
       - YOUR_FDP_PORT:80
-  grlc:
+  fdpsearch:
     environment:
       - GRLC_SERVER_NAME=YOUR_GRLC_SERVER_NAME

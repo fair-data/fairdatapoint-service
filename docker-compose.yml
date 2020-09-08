@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     depends_on:
       - virtuoso
-  grlc:
+  fdpsearch:
     image: "nlesc/fairdatapoint-search"
     restart: unless-stopped
     ports:
