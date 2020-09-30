@@ -6,7 +6,7 @@ Docker compose files to deploy FDP service.
 
 ### Update the file `docker-compose.prod.yml`:
 
-Replace the `YOUR_FDP_HOST`,`YOUR_FDP_PORT` and `YOUR_GRLC_SERVER_NAME` in the file
+Replace the `YOUR_FDP_HOST_OR_SERVERNAME`,`YOUR_FDP_PORT` and `YOUR_GRLC_SERVER_NAME` in the file
 with proper values. Check the exmaple values in `docker-compose.prod.example.yml`.
 
 ### Run docker compose to start the service:
